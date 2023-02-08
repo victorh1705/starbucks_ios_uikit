@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		E56FC47229941DE8002581BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC47129941DE8002581BC /* AppDelegate.swift */; };
-		E56FC47429941DE8002581BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC47329941DE8002581BC /* SceneDelegate.swift */; };
 		E56FC47629941DE8002581BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC47529941DE8002581BC /* ViewController.swift */; };
 		E56FC47929941DE8002581BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56FC47729941DE8002581BC /* Main.storyboard */; };
 		E56FC47B29941DEC002581BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56FC47A29941DEC002581BC /* Assets.xcassets */; };
 		E56FC47E29941DEC002581BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56FC47C29941DEC002581BC /* LaunchScreen.storyboard */; };
+		E56FC48A29942173002581BC /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC48929942173002581BC /* HomeTabBarController.swift */; };
+		E56FC48D2994220E002581BC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC48C2994220E002581BC /* HomeViewController.swift */; };
+		E56FC49029942390002581BC /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC48F29942390002581BC /* Ext+UIViewController.swift */; };
+		E56FC4922994249A002581BC /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC4912994249A002581BC /* ScanViewController.swift */; };
+		E56FC49429942535002581BC /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC49329942535002581BC /* OrderViewController.swift */; };
+		E56FC49629942701002581BC /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC49529942701002581BC /* GiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E56FC46E29941DE8002581BC /* starbucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = starbucks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56FC47129941DE8002581BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E56FC47329941DE8002581BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E56FC47529941DE8002581BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E56FC47829941DE8002581BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E56FC47A29941DEC002581BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E56FC47D29941DEC002581BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E56FC47F29941DEC002581BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E56FC48929942173002581BC /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		E56FC48C2994220E002581BC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E56FC48F29942390002581BC /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
+		E56FC4912994249A002581BC /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		E56FC49329942535002581BC /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		E56FC49529942701002581BC /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +66,9 @@
 		E56FC47029941DE8002581BC /* starbucks */ = {
 			isa = PBXGroup;
 			children = (
+				E56FC48E29942372002581BC /* Ext */,
+				E56FC485299420BE002581BC /* Feature */,
 				E56FC47129941DE8002581BC /* AppDelegate.swift */,
-				E56FC47329941DE8002581BC /* SceneDelegate.swift */,
 				E56FC47529941DE8002581BC /* ViewController.swift */,
 				E56FC47729941DE8002581BC /* Main.storyboard */,
 				E56FC47A29941DEC002581BC /* Assets.xcassets */,
@@ -65,6 +76,42 @@
 				E56FC47F29941DEC002581BC /* Info.plist */,
 			);
 			path = starbucks;
+			sourceTree = "<group>";
+		};
+		E56FC485299420BE002581BC /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				E56FC486299420E8002581BC /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		E56FC486299420E8002581BC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E56FC48B299421EF002581BC /* Views */,
+				E56FC48929942173002581BC /* HomeTabBarController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E56FC48B299421EF002581BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E56FC48C2994220E002581BC /* HomeViewController.swift */,
+				E56FC4912994249A002581BC /* ScanViewController.swift */,
+				E56FC49329942535002581BC /* OrderViewController.swift */,
+				E56FC49529942701002581BC /* GiftViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E56FC48E29942372002581BC /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				E56FC48F29942390002581BC /* Ext+UIViewController.swift */,
+			);
+			path = Ext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +187,12 @@
 			files = (
 				E56FC47629941DE8002581BC /* ViewController.swift in Sources */,
 				E56FC47229941DE8002581BC /* AppDelegate.swift in Sources */,
-				E56FC47429941DE8002581BC /* SceneDelegate.swift in Sources */,
+				E56FC49029942390002581BC /* Ext+UIViewController.swift in Sources */,
+				E56FC49429942535002581BC /* OrderViewController.swift in Sources */,
+				E56FC49629942701002581BC /* GiftViewController.swift in Sources */,
+				E56FC48A29942173002581BC /* HomeTabBarController.swift in Sources */,
+				E56FC48D2994220E002581BC /* HomeViewController.swift in Sources */,
+				E56FC4922994249A002581BC /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +346,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +374,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
