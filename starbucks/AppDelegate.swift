@@ -16,10 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         
+        let homeTabBar = HomeTabBarController()
+        homeTabBar.tabBar.tintColor = .systemGreen
+        homeTabBar.tabBar.unselectedItemTintColor = .systemGray
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = HomeTabBarController()
+        
+        window?.rootViewController = homeTabBar
         
         return true
     }

@@ -12,6 +12,6 @@ extension UIViewController {
     func setupTabBarItem(icon imageName: String, title: String, tag: Int = 0) {
         let configuration = UIImage.SymbolConfiguration(scale: .large)
         let image = UIImage(systemName: imageName, withConfiguration: configuration)
-        tabBarItem = UITabBarItem(title: title, image: image, tag: tag)
+        self.tabBarItem = UITabBarItem(title: title, image: image, tag: tag)
     }
 }
