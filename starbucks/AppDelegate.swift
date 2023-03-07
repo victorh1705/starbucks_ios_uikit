@@ -17,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         
         let homeTabBar = HomeTabBarController()
-        homeTabBar.tabBar.tintColor = .systemGreen
-        homeTabBar.tabBar.unselectedItemTintColor = .systemGray
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()

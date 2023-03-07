@@ -11,10 +11,7 @@ class ScanViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        setupTabBarItem(icon: "qrcode", title: "Scan", tag: 1)
-        title = "Scan"
     }
     
 
@@ -28,4 +25,11 @@ class ScanViewController: UIViewController {
     }
     */
 
+}
+
+extension ScanViewController: UITabBarItemProtocol {
+    func setupTabBarItem() {
+        setupTabBarItem(icon: "qrcode", title: "Scan", tag: 1)
+        title = "Scan"
+    }
 }

@@ -9,24 +9,24 @@ import UIKit
 
 class HomeTabBarController: UITabBarController {
     
-    private lazy var homeViewController: UINavigationController = {
-        let view = UINavigationController(rootViewController: HomeViewController())
+    private lazy var homeViewController: UIViewController = {
+        let view = HomeViewController()
         return view
     }()
     
-    private lazy var scanViewController: UINavigationController = {
-        let view = UINavigationController(rootViewController: ScanViewController())
+    private lazy var scanViewController: UIViewController = {
+        let view = ScanViewController()
         return view
     }()
     
     
-    private lazy var orderViewController = {
-        let view = UINavigationController(rootViewController: OrderViewController())
+    private lazy var orderViewController: UIViewController = {
+        let view = OrderViewController()
         return view
     }()
     
-    private lazy var giftViewController: UINavigationController = {
-        let view = UINavigationController(rootViewController: GiftViewController())
+    private lazy var giftViewController: UIViewController = {
+        let view = GiftViewController()
         return view
     }()
     
@@ -40,16 +40,25 @@ class HomeTabBarController: UITabBarController {
     private func setupTabBar() {
         
         tabBar.isTranslucent = false
+        tabBar.tintColor = .systemGreen
+        tabBar.unselectedItemTintColor = .systemGray
+
+        let viewControllers: [UIViewController] = [
+            homeViewController,
+            scanViewController,
+            orderViewController,
+            giftViewController,
+        ]
         
         setViewControllers(
-            [
-                homeViewController,
-                scanViewController,
-                orderViewController,
-                giftViewController,
-            ],
+            viewControllers,
             animated: true
         )
+        
+        viewControllers.forEach { viewController in
+            guard let item = viewControllers as? [UITabBarItemProtocol] else { return }
+            item.forEach { $0.setupTabBarItem() }
+        }
     }
     
     
