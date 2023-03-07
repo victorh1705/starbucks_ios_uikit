@@ -30,6 +30,11 @@ class HomeTabBarController: UITabBarController {
         return view
     }()
     
+    private lazy var offerViewConreoller: OfferViewController = {
+        let view = OfferViewController()
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +53,7 @@ class HomeTabBarController: UITabBarController {
             scanViewController,
             orderViewController,
             giftViewController,
+            offerViewConreoller,
         ]
         
         setViewControllers(

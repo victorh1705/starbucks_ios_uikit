@@ -26,7 +26,7 @@ class OrderViewController: UIViewController {
 
 extension OrderViewController: UITabBarItemProtocol {
     func setupTabBarItem() {
-        setupTabBarItem(icon: "arrow.up.bin.fill", title: "Order", tag: 2)
+        setupTabBarItem(icon: "takeoutbag.and.cup.and.straw.fill", title: "Order", tag: 2)
         title = "Order"
     }
 }

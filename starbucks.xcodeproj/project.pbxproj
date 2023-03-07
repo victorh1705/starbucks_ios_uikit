@@ -20,6 +20,7 @@
 		E56FC49629942701002581BC /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FC49529942701002581BC /* GiftViewController.swift */; };
 		E573427C29B667C8008C85F8 /* UITabBatItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573427B29B667C8008C85F8 /* UITabBatItemProtocol.swift */; };
 		E573427E29B6681A008C85F8 /* Ext+UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573427D29B6681A008C85F8 /* Ext+UITabBarController.swift */; };
+		E573428329B76CBF008C85F8 /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573428229B76CBF008C85F8 /* OfferViewController.swift */; };
 		E590EA3A299A8D9C00376353 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590EA39299A8D9C00376353 /* HomeHeaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		E56FC49529942701002581BC /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		E573427B29B667C8008C85F8 /* UITabBatItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBatItemProtocol.swift; sourceTree = "<group>"; };
 		E573427D29B6681A008C85F8 /* Ext+UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITabBarController.swift"; sourceTree = "<group>"; };
+		E573428229B76CBF008C85F8 /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		E590EA39299A8D9C00376353 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,10 +107,11 @@
 		E56FC48B299421EF002581BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E590EA35299A8D0A00376353 /* ScanViewController */,
+				E573428029B76C5F008C85F8 /* GiftViewController */,
 				E590EA34299A8CDF00376353 /* HomeViewController */,
-				E56FC49329942535002581BC /* OrderViewController.swift */,
-				E56FC49529942701002581BC /* GiftViewController.swift */,
+				E573428129B76C6D008C85F8 /* OfferViewController */,
+				E573427F29B76C44008C85F8 /* OrderViewController */,
+				E590EA35299A8D0A00376353 /* ScanViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +131,30 @@
 				E573427B29B667C8008C85F8 /* UITabBatItemProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E573427F29B76C44008C85F8 /* OrderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E56FC49329942535002581BC /* OrderViewController.swift */,
+			);
+			path = OrderViewController;
+			sourceTree = "<group>";
+		};
+		E573428029B76C5F008C85F8 /* GiftViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E56FC49529942701002581BC /* GiftViewController.swift */,
+			);
+			path = GiftViewController;
+			sourceTree = "<group>";
+		};
+		E573428129B76C6D008C85F8 /* OfferViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E573428229B76CBF008C85F8 /* OfferViewController.swift */,
+			);
+			path = OfferViewController;
 			sourceTree = "<group>";
 		};
 		E590EA34299A8CDF00376353 /* HomeViewController */ = {
@@ -237,6 +264,7 @@
 				E56FC48A29942173002581BC /* HomeTabBarController.swift in Sources */,
 				E56FC48D2994220E002581BC /* HomeViewController.swift in Sources */,
 				E56FC4922994249A002581BC /* ScanViewController.swift in Sources */,
+				E573428329B76CBF008C85F8 /* OfferViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
