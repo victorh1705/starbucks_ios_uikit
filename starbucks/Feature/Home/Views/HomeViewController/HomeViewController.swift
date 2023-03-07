@@ -65,6 +65,6 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITabBarItemProtocol {
     func setupTabBarItem() {
-        setupTabBarItem(icon: "house", title: "Home")
+        setupTabBarItem(icon: "house.fill", title: "Home")
     }
 }

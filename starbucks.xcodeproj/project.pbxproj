@@ -21,6 +21,7 @@
 		E573427C29B667C8008C85F8 /* UITabBatItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573427B29B667C8008C85F8 /* UITabBatItemProtocol.swift */; };
 		E573427E29B6681A008C85F8 /* Ext+UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573427D29B6681A008C85F8 /* Ext+UITabBarController.swift */; };
 		E573428329B76CBF008C85F8 /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573428229B76CBF008C85F8 /* OfferViewController.swift */; };
+		E573428529B78C43008C85F8 /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573428429B78C43008C85F8 /* RewardViewController.swift */; };
 		E590EA3A299A8D9C00376353 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590EA39299A8D9C00376353 /* HomeHeaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		E573427B29B667C8008C85F8 /* UITabBatItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBatItemProtocol.swift; sourceTree = "<group>"; };
 		E573427D29B6681A008C85F8 /* Ext+UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITabBarController.swift"; sourceTree = "<group>"; };
 		E573428229B76CBF008C85F8 /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
+		E573428429B78C43008C85F8 /* RewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
 		E590EA39299A8D9C00376353 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				E590EA39299A8D9C00376353 /* HomeHeaderView.swift */,
+				E573428429B78C43008C85F8 /* RewardViewController.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				E56FC48A29942173002581BC /* HomeTabBarController.swift in Sources */,
 				E56FC48D2994220E002581BC /* HomeViewController.swift in Sources */,
 				E56FC4922994249A002581BC /* ScanViewController.swift in Sources */,
+				E573428529B78C43008C85F8 /* RewardViewController.swift in Sources */,
 				E573428329B76CBF008C85F8 /* OfferViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

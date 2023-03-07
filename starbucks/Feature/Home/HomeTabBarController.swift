@@ -14,24 +14,24 @@ class HomeTabBarController: UITabBarController {
         return view
     }()
     
-    private lazy var scanViewController: UIViewController = {
-        let view = ScanViewController()
+    private lazy var scanViewController: UINavigationController = {
+        let view = UINavigationController(rootViewController: ScanViewController())
         return view
     }()
     
     
-    private lazy var orderViewController: UIViewController = {
-        let view = OrderViewController()
+    private lazy var orderViewController: UINavigationController = {
+        let view = UINavigationController(rootViewController: OrderViewController())
         return view
     }()
     
-    private lazy var giftViewController: UIViewController = {
-        let view = GiftViewController()
+    private lazy var giftViewController: UINavigationController = {
+        let view = UINavigationController(rootViewController: GiftViewController())
         return view
     }()
     
-    private lazy var offerViewConreoller: OfferViewController = {
-        let view = OfferViewController()
+    private lazy var offerViewConreoller: UINavigationController = {
+        let view = UINavigationController(rootViewController: OfferViewController())
         return view
     }()
     
@@ -61,10 +61,18 @@ class HomeTabBarController: UITabBarController {
             animated: true
         )
         
-        viewControllers.forEach { viewController in
-            guard let item = viewControllers as? [UITabBarItemProtocol] else { return }
-            item.forEach { $0.setupTabBarItem() }
+        let tabBatitens: [UITabBarItemProtocol] = viewControllers.map { viewController in
+            if let viewController = viewController as? UITabBarItemProtocol {
+                return viewController
+            }
+            guard let navigationController = viewController as? UINavigationController,
+               let firstController = navigationController.viewControllers.first as? UITabBarItemProtocol else {
+                fatalError("UIViewController incorrect")
+            }
+            return firstController
         }
+        
+        tabBatitens.forEach { $0.setupTabBarItem() }
     }
     
     

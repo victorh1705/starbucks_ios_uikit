@@ -73,6 +73,39 @@ class HomeHeaderView: UIView {
     private lazy var blankSpace: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        return view
+    }()
+    
+    private lazy var receiptButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let image = UIImage(
+            systemName: "doc.text",
+            withConfiguration: UIImage.SymbolConfiguration(scale: .large)
+        )
+        
+        view.setImage(image, for: .normal)
+        view.imageView?.tintColor = .secondaryLabel
+        view.imageView?.contentMode = .scaleAspectFit
+        
+        return view
+    }()
+    
+    private lazy var profileButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let image = UIImage(
+            systemName: "person.circle",
+            withConfiguration: UIImage.SymbolConfiguration(scale: .large)
+        )
+        
+        view.setImage(image, for: .normal)
+        view.imageView?.tintColor = .secondaryLabel
+        view.imageView?.contentMode = .scaleAspectFit
+        
         return view
     }()
     
@@ -93,6 +126,8 @@ class HomeHeaderView: UIView {
         stackView.addArrangedSubview(inboxButton)
         stackView.addArrangedSubview(historyButton)
         stackView.addArrangedSubview(blankSpace)
+        stackView.addArrangedSubview(receiptButton)
+        stackView.addArrangedSubview(profileButton)
     }
     
     func setupConstrains(){
