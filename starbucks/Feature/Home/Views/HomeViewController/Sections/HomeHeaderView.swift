@@ -19,7 +19,7 @@ class HomeHeaderView: UIView {
         return view
     }()
     
-    private lazy var stackView: UIStackView = {
+    private lazy var horizontalStackView: UIStackView = {
         let view = UIStackView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.spacing = 16
@@ -106,6 +106,8 @@ class HomeHeaderView: UIView {
         view.imageView?.tintColor = .secondaryLabel
         view.imageView?.contentMode = .scaleAspectFit
         
+//        view.set
+        
         return view
     }()
     
@@ -121,25 +123,30 @@ class HomeHeaderView: UIView {
     
     func buildHierarchy(){
         addSubview(grettingLabel)
-        addSubview(stackView)
+        addSubview(horizontalStackView)
         
-        stackView.addArrangedSubview(inboxButton)
-        stackView.addArrangedSubview(historyButton)
-        stackView.addArrangedSubview(blankSpace)
-        stackView.addArrangedSubview(receiptButton)
-        stackView.addArrangedSubview(profileButton)
+        horizontalStackView.addArrangedSubview(inboxButton)
+        horizontalStackView.addArrangedSubview(historyButton)
+        horizontalStackView.addArrangedSubview(blankSpace)
+        horizontalStackView.addArrangedSubview(receiptButton)
+        horizontalStackView.addArrangedSubview(profileButton)
     }
     
     func setupConstrains(){
         NSLayoutConstraint.activate([
             grettingLabel.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 1),
-            grettingLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
-            trailingAnchor.constraint(equalToSystemSpacingAfter: grettingLabel.trailingAnchor, multiplier: 2),
+            grettingLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            //            grettingLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
+//            trailingAnchor.constraint(equalToSystemSpacingAfter: grettingLabel.trailingAnchor, multiplier: -2),
+//            grettingLabel.trailingAnchor.constraint(equalToSystemSpacingAfter: trailingAnchor, multiplier: -1),
+//            grettingLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+            grettingLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            stackView.topAnchor.constraint(equalToSystemSpacingBelow: grettingLabel.bottomAnchor, multiplier: 2),
-            stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
-            stackView.trailingAnchor.constraint(equalToSystemSpacingAfter: trailingAnchor, multiplier: -2),
-            stackView.bottomAnchor.constraint(equalToSystemSpacingBelow: bottomAnchor, multiplier: -2)
+            horizontalStackView.topAnchor.constraint(equalToSystemSpacingBelow: grettingLabel.bottomAnchor, multiplier: 2),
+            horizontalStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            horizontalStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            horizontalStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+
         ])
     }
     

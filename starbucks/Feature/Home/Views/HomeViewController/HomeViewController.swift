@@ -19,12 +19,22 @@ class HomeViewController: UIViewController {
         let view = UIStackView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .vertical
+        view.alignment = .fill
         view.spacing = 8
         return view
     }()
     
     private lazy var homeHeaderView: HomeHeaderView = {
         let view = HomeHeaderView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+//        view.layoutMargins = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: -8)
+        
+        return view
+    }()
+    
+    private lazy var rewardView: RewardViewController = {
+        let view = RewardViewController()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -45,6 +55,7 @@ class HomeViewController: UIViewController {
         scrollView.addSubview(stackView)
         
         stackView.addArrangedSubview(homeHeaderView)
+        stackView.addArrangedSubview(rewardView)
     }
     
     func setupContraints(){
@@ -54,10 +65,15 @@ class HomeViewController: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
-            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 8),
-            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 8),
-            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -8),
-            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -8),
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: scrollView.bottomAnchor),
+            
+            rewardView.heightAnchor.constraint(equalToConstant: 300),
+//            rewardView.widthAnchor.constraint(equalToConstant: 400),
+//            rewardView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+//            rewardView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
         ])
     }
     
